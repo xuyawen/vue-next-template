@@ -1,0 +1,48 @@
+{
+  "name": "fhr-pc",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "serve": "cross-env ts-node --files -P  ./build/tsconfig.json ./build/script/preserve && cross-env NODE_ENV=development vite",
+    "build": "cross-env NODE_ENV=production vite build && node ./build/jsc.ts build",
+    "bootstrap": "yarn install || npm install"
+  },
+  "dependencies": {
+    "ant-design-vue": "^2.0.0-rc.2",
+    "axios": "^0.21.0",
+    "echarts": "^4.9.0",
+    "lodash-es": "^4.17.15",
+    "vue": "^3.0.2",
+    "vue-router": "^4.0.0-rc.5"
+  },
+  "devDependencies": {
+    "@types/echarts": "^4.9.2",
+    "@types/fs-extra": "^9.0.4",
+    "@types/inquirer": "^7.3.1",
+    "@types/koa-static": "^4.0.1",
+    "@types/lodash-es": "^4.17.3",
+    "@types/shelljs": "^0.8.8",
+    "@types/yargs": "^15.0.10",
+    "@vue/compiler-sfc": "^3.0.3",
+    "autoprefixer": "^9.8.6",
+    "chalk": "^4.1.0",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "fs-extra": "^9.0.1",
+    "inquirer": "^7.3.3",
+    "koa-static": "^5.0.0",
+    "less": "^3.12.2",
+    "portfinder": "^1.0.28",
+    "postcss-import": "^12.0.1",
+    "rollup-plugin-visualizer": "^4.2.0",
+    "shelljs": "^0.8.4",
+    "tasksfile": "^5.1.1",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.1.2",
+    "vite": "^1.0.0-rc.8",
+    "yargs": "^16.1.1"
+  },
+  "engines": {
+    "node": ">=10.16.1"
+  }
+}
